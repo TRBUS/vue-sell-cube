@@ -1,6 +1,6 @@
 <template>
   <div id="app" @touchmove.prevent>
-    <v-header></v-header>
+    <v-header :seller="seller"></v-header>
     <div class="tab-wrapper">
     </div>
   </div>
@@ -18,9 +18,14 @@
       }
     },
     created () {
-      getSeller().then((seller) => {
-        this.seller = seller
-      })
+     this.__getSeller()
+    },
+    methods: {
+      __getSeller() {
+        getSeller().then((seller) => {
+          this.seller = seller
+        })
+      }
     },
     components: {
       VHeader
