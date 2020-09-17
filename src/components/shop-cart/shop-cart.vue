@@ -31,16 +31,19 @@
         type: Array,
         default() {
           return []
-        },
-        deliveryPrice: {
-          type: Number,
-          default: 0
-        },
-        minPrice: {
-          type: Number,
-          default: 0
         }
+      },
+      deliveryPrice: {
+        type: Number,
+        default: 0
+      },
+      minPrice: {
+        type: Number,
+        default: 0
       }
+    },
+    data() {
+      return {}
     },
     computed: {
       totalPrice() {
