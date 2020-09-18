@@ -53,6 +53,15 @@
     }
     return ret
   }
+
+  // function createBalls() {
+  //   const balls = []
+  //   for (let i = 0; i < BALL_LEN; i++) {
+  //     balls.push({ show: false })
+  //   }
+  //   return balls
+  // }
+
   export default {
     name: 'shop-cart',
     props: {
@@ -73,7 +82,7 @@
     },
     data() {
       return {
-        balls: creatBalls
+        balls: creatBalls()
       }
     },
     computed: {
@@ -114,6 +123,7 @@
     },
     methods: {
       drop(el) {
+        console.log('球来')
         for (let i = 0; i < this.balls.length; i++) {
           const ball = this.balls[i]
           if (!ball.show) {
